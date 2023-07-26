@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" >
+
+  <head>
+    <title th:text="#{example.title}">La page des examples</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+
+  <body>
+
+    <h1>Liste d'exemples</h1>
+    <table>
+     <tr>
+      <th>Nom</th>
+      <th th:text="#{page-example.numero}">Numero</th>
+      <th th:text="#{page-example.lien}">Lien</th>
+     </tr>
+     <tr th:each="example : ${examples}">
+      <td th:text="${example.nom}">Cogip</td>
+      <td th:text="${example.taille}">782</td>
+      <td>
+        <a href="example-detail.html" 
+          th:href="@{/example-detail(id=${example.id})}">
+          Cliquez ici pour afficher l'example
+        </a>
+      </td>
+     </tr>
+    </table>
+    
+  </body>
+</html>

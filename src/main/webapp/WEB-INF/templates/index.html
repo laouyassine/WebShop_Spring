@@ -1,0 +1,18 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<title>Page d'index branchée à Spring Security</title>
+</head>
+<body>
+ <div>
+  <h1 th:inline="text">
+   Bienvenue
+   <span th:remove="tag" sec:authentication="name">thymeleaf</span>
+   !
+   
+  </h1>
+  <form th:action="@{/logout}" method="post">
+   <input type="submit" value="Déconnexion" />
+  </form>
+ </div>
+</body>
+</html>

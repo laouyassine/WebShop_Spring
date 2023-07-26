@@ -1,0 +1,54 @@
+@startuml
+
+class Restaurant{
+	Long id
+	String name
+}
+
+class Table{
+	Long id
+	Integer number
+	Integer size
+}
+
+class Reservation{
+	Long id
+	Table table
+	Customer customer
+	Integer guestsNumber
+	DateTime dateTime
+}
+
+class Customer{
+	Long id
+	String firstName
+	String lastName
+	String login
+	String password
+}
+
+class CustomerVIP{
+	Long id
+	String alias
+}
+
+class CustomerCompany{
+	Long id
+	String companyName
+	String VATNumber
+}
+
+class Voucher{
+	Long id
+	String name
+	Integer amount
+}
+
+Table "*"<-->"1" Restaurant
+Reservation "*"<-->"1" Table
+Reservation "*"<-->"*" Customer
+Customer "1"<-->"1" Voucher
+CustomerCompany --|> Customer
+CustomerVIP --|> Customer
+
+@enduml
