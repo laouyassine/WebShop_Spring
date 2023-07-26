@@ -13,7 +13,6 @@ public class SpringJpaApplication {
 				= new AnnotationConfigApplicationContext(
 				SpringConfiguration.class)) {
 			
-			
 		}
 	}
 
