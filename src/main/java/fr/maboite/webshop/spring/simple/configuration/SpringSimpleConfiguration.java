@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 //Scanne les composants trouvés dans le
 //package fourni en paramètre
-@ComponentScan("mettre-ici-un-nom-de-package-a-scanner")
+@ComponentScan("fr.maboite.webshop.service")
 public class SpringSimpleConfiguration {
 
 }
