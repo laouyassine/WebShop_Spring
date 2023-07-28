@@ -44,6 +44,13 @@ public class MonPremierService {
 		this.proprieteDeConfiguration = proprieteDeConfiguration;
 	}
 
+	/**
+	 * Renvoie la somme de a et b
+	 * 
+	 * @param a
+	 * @param b
+	 * @return
+	 */
 	public int sum(int a, int b) {
 		return a + b;
 	}

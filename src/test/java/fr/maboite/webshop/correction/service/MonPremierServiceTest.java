@@ -16,7 +16,7 @@ public class MonPremierServiceTest {
 	@Test
 	public void testSum() {
 		int resultat = monPremierService.sum(3, 4);
-		Assertions.assertEquals(resultat, 7);
+		Assertions.assertEquals(7, resultat);
 	}
 
 }
