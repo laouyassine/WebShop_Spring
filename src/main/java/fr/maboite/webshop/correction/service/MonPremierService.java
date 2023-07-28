@@ -1,6 +1,7 @@
 package fr.maboite.webshop.correction.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -8,6 +9,9 @@ import org.springframework.stereotype.Component;
 public class MonPremierService {
 
 	private String nom = "nom par défaut";
+
+	@Value("${ma.propriete.1}")
+	private String proprieteDeConfiguration = "nom par défaut";
 
 	@Autowired
 	private MonPremierDao monPremierDao;
@@ -32,5 +36,16 @@ public class MonPremierService {
 		this.nom = nom;
 	}
 
+	public String getProprieteDeConfiguration() {
+		return proprieteDeConfiguration;
+	}
+
+	public void setProprieteDeConfiguration(String proprieteDeConfiguration) {
+		this.proprieteDeConfiguration = proprieteDeConfiguration;
+	}
+
+	public int sum(int a, int b) {
+		return a + b;
+	}
 
 }
