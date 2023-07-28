@@ -1,4 +1,4 @@
-package fr.maboite.webshop.service;
+package fr.maboite.webshop.correction.service;
 
 import org.springframework.stereotype.Component;
 
