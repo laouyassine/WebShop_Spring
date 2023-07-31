@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-import fr.maboite.webshop.correction.service.MonDeuxiemeService;
+import fr.maboite.webshop.correction.service.simple.MonDeuxiemeService;
 
 //Déclare un bean de configuration
 //ce bean va créer d'autres instances

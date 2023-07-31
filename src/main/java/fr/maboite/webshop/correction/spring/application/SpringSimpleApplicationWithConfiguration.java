@@ -2,8 +2,8 @@ package fr.maboite.webshop.correction.spring.application;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import fr.maboite.webshop.correction.service.MonDeuxiemeService;
-import fr.maboite.webshop.correction.service.MonPremierService;
+import fr.maboite.webshop.correction.service.simple.MonDeuxiemeService;
+import fr.maboite.webshop.correction.service.simple.MonPremierService;
 import fr.maboite.webshop.correction.spring.configuration.SpringSimpleConfiguration;
 
 /**

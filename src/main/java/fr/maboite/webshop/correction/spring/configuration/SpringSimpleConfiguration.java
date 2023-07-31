@@ -5,7 +5,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
-import fr.maboite.webshop.correction.service.MonDeuxiemeService;
+import fr.maboite.webshop.correction.service.simple.MonDeuxiemeService;
 
 //Déclare un bean de configuration
 //ce bean va créer d'autres instances
@@ -13,7 +13,7 @@ import fr.maboite.webshop.correction.service.MonDeuxiemeService;
 
 //Scanne les composants trouvés dans le
 //package fourni en paramètre
-@ComponentScan("fr.maboite.webshop.correction")
+@ComponentScan("fr.maboite.webshop.correction.service.simple")
 @PropertySource("classpath:example-application.properties")
 public class SpringSimpleConfiguration {
 

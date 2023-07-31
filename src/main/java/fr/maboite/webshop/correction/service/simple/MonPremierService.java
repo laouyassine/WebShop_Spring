@@ -1,4 +1,4 @@
-package fr.maboite.webshop.correction.service;
+package fr.maboite.webshop.correction.service.simple;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
