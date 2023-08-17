@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Liste des Planètes</title>
+</head>
+<body>
+    <h1>Liste des Planètes</h1>
+    <ul>
+        <li th:each="planete : ${planetes}">
+            <a th:href="@{/detail(id=${planete.id})}" th:text="${planete.nom}"></a>
+        </li>
+    </ul>
+</body>
+</html>
