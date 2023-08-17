@@ -7,7 +7,7 @@
     <h1>Liste des Planètes</h1>
     <ul>
         <li th:each="planete : ${planetes}">
-            <a th:href="@{/detail(id=${planete.id})}" th:text="${planete.nom}"></a>
+            <a th:href="@{/detail/{id}(id=${planete.id})}" th:text="${planete.nom}"></a>
         </li>
     </ul>
 </body>

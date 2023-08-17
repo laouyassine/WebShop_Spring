@@ -2,7 +2,6 @@ package fr.maboite.webshop.controller.correction;
 
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Component;
@@ -13,6 +12,7 @@ import fr.maboite.webshop.model.Planete;
 public class PlaneteService {
 
 	private Map<Integer, Planete> planetes = new HashMap<>();
+
 
 	public PlaneteService() {
 		Planete mercure = new Planete();
@@ -37,6 +37,9 @@ public class PlaneteService {
 
 	public Collection<Planete> getAll() {
 		return this.planetes.values();
+	}
+	public void save(Planete planete) {
+		this.planetes.put(planete.getId(), planete);
 	}
 
 }

@@ -1,7 +1,15 @@
 package fr.maboite.webshop.model;
 
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
 public class Planete {
+    @NotNull(message = "Lid ne peut pas être nul")
     private int id;
+    
+    @NotEmpty
+    @Size(max = 10)
     private String nom;
 	public int getId() {
 		return id;

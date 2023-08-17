@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Détail d'une Planète</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+    <h1>Détail de la Planète</h1>
+    <div th:text="${errorString}">Erreur</div>
+    <form th:action="@{/planete}" th:object="${planete}" method="post">
+            <div>
+          <label for="id">Nom:</label>
+          <input id="id" type="text" th:field="*{id}" />
+          <div th:if="${#fields.hasErrors('id')}" th:errors="*{id}"></div>
+        </div>
+		
+		<div>
+          <label for="nom">Nom:</label>
+          <input id="nom" type="text" th:field="*{nom}" />
+          <div th:if="${#fields.hasErrors('nom')}" th:errors="*{nom}"></div>
+        </div>
+
+		<div>
+			<input type="submit" value="sauvegarder" />
+		</div>
+		
+        </form>
+    </div>
+    
+    <a th:href="@{/planetes}">Retour à la liste des planètes</a>
+</body>
+
+</html>
