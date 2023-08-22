@@ -5,8 +5,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
-import fr.maboite.webshop.correction.service.simple.MonPremierService;
 import fr.maboite.webshop.correction.spring.configuration.SpringSimpleConfiguration;
+import fr.maboite.webshop.service.MonPremierService;
 
 @SpringJUnitConfig(SpringSimpleConfiguration.class)
 public class MonPremierServiceTest {

@@ -12,7 +12,8 @@ import fr.maboite.webshop.correction.service.simple.MonDeuxiemeService;
 
 //Scanne les composants trouvés dans le
 //package fourni en paramètre
-@ComponentScan("fr.maboite.webshop.correction")
+
+@ComponentScan("fr.maboite.webshop.correction.service.simple")
 public class SpringSimpleConfiguration {
 
 	@Bean
