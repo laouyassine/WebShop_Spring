@@ -9,27 +9,23 @@
 <body>
     <h1>Détail de la Planète</h1>
     <div th:text="${errorString}">Erreur</div>
-    <form th:action="@{/planete}" th:object="${planete}" method="post">
-            <div>
-          <label for="id">Nom:</label>
-          <input id="id" type="text" th:field="*{id}" />
-          <div th:if="${#fields.hasErrors('id')}" th:errors="*{id}"></div>
+    <form action="./planete" method="POST">
+        <div>
+            <label for="id">ID:</label>
+            <input id="id" type="text" th:field="*{id}" readonly="readonly" />
         </div>
-		
-		<div>
-          <label for="nom">Nom:</label>
-          <input id="nom" type="text" th:field="*{nom}" />
-          <div th:if="${#fields.hasErrors('nom')}" th:errors="*{nom}"></div>
+        <div>
+            <label for="nom">Nom:</label>
+            <input id="nom" type="text" th:field="*{nom}" />
+            <p class="error" th:if="${#fields.hasErrors('nom')}" th:errors="*{nom}">Erreur de validation</p>
         </div>
-
-		<div>
-			<input type="submit" value="sauvegarder" />
-		</div>
-		
-        </form>
-    </div>
+        <div>
+            <input type="submit" value="Sauvegarder" />
+        </div>
+    </form>
     
     <a th:href="@{/planetes}">Retour à la liste des planètes</a>
 </body>
 
 </html>
+
